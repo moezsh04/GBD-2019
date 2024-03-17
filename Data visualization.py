@@ -21,9 +21,9 @@ pd.options.display.float_format = '{:.2f}'.format
 
 for x in data["cause_name"].unique():
     df1=data[(data["cause_id"]==data[data["cause_name"]==x]["cause_id"].iloc[10]) &
-        (data["age_id"]==22) &
+        (data["age_id"]==27) &
         (data["location_id"]==142) &
-        (data["metric_name"]=="Number") &
+        (data["metric_name"]=="Rate") &
         (data["year"].notnull())]
     a=[v for k, v in df1.groupby('sex_name')]
     for i,val in enumerate(a):
